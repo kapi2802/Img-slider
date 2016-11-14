@@ -1,0 +1,123 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Css Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+{
+	display: block;
+}
+
+body 
+{
+	line-height: 1;
+}
+
+ol, ul 
+{
+	list-style: none;
+}
+
+blockquote, q 
+{
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+{
+	content: '';
+	content: none;
+}
+
+table 
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* BG */
+
+body
+{
+    background-color: #000;
+}
+
+#bg 
+{
+    transition: opacity 2s ease-in-out;
+    height: 100%;
+    opacity: 0.40;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#bg div
+{
+    transition: opacity 3s ease, visibility 3s;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+}
+
+#bg div.visible 
+{
+    animation: bg 45s linear infinite;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+#bg div.visible.top {
+    z-index: 2;
+}
+
+@keyframes bg {
+    0% 
+    {
+        transform: scale(1, 1);
+    }
+    
+    100% 
+    {
+        transform: scale(1.8, 1.8);
+    }
+}
+
+#wrapper
+{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
